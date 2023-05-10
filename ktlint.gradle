@@ -1,0 +1,43 @@
+apply plugin: 'io.gitlab.arturbosch.detekt'
+
+configurations {
+    ktlint
+}
+
+dependencies {
+    ktlint 'com.pinterest:ktlint:0.40.0'
+}
+
+/*
+  run example ./gradlew ktlint --console=plain
+*/
+task ktLint(type: JavaExec, group: 'verification') {
+    description = 'Check Kotlin code style.'
+    classpath = configurations.ktlint
+    mainClass = 'com.pinterest.ktlint.Main'
+    args 'src/**/*.kt'
+}
+
+/*
+  run example ./gradlew ktLintFormat --console=plain
+*/
+task ktLintFormat(type: JavaExec, group: 'formatting') {
+    description = 'Fix Kotlin code style deviations.'
+    classpath = configurations.ktlint
+    mainClass = 'com.pinterest.ktlint.Main'
+    args '-F', 'src/**/*.kt'
+}
+
+/*
+  run example ./gradlew detekt --console=plain
+*/
+detekt {
+    toolVersion = versions.detekt
+    input = files(
+            'src/main/java', 'src/main/kotlin',
+            'src/test/java', 'src/test/kotlin',
+            'src/androidTest/java', 'src/androidTest/kotlin'
+    )
+    parallel = true
+    config = files("$rootDir/detekt.yml")
+}

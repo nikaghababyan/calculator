@@ -1,0 +1,28 @@
+plugins {
+    id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp'
+}
+
+android {
+    android.libraryVariants.all { variant ->
+        variant.sourceSets.java.each {
+            it.srcDirs += "build/generated/ksp/${variant.name}/kotlin"
+        }
+    }
+}
+
+dependencies {
+
+    testImplementation(test.junit)
+    testImplementation(test.mockk)
+    testImplementation(test.coroutinesTest)
+    androidTestImplementation(androidTest.androidxJunit)
+    androidTestImplementation(androidTest.androidxEspressoCore)
+    implementation(libraries.coroutines)
+    implementation(androidXLibraries.paging)
+    implementation(libraries.koinAndroid)
+    implementation(libraries.koinAnnotations)
+    ksp libraries.kspCompiler
+    implementation(libraries.gson)
+    implementation(libraries.timber)
+}

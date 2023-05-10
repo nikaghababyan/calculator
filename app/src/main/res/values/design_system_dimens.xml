@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Zero margin (0dp) -->
+    <dimen name="margin_zero">0dp</dimen>
+
+    <!-- Standard extra-extra-small margin (4dp) -->
+    <dimen name="margin_s">4dp</dimen>
+
+    <!-- Standard small margin (8dp) -->
+    <dimen name="margin_xs">8dp</dimen>
+
+    <!-- Standard normal margin -->
+    <dimen name="margin_n">12dp</dimen>
+
+    <!-- Standard medium margin (14dp) -->
+    <dimen name="margin_m">14dp</dimen>
+
+    <!-- Standard medium margin 2 (16dp) -->
+    <dimen name="margin_xm">16dp</dimen>
+
+    <!-- Standard enlarged margin -->
+    <dimen name="margin_e">20dp</dimen>
+
+    <!-- Standard large margin (24dp) -->
+    <dimen name="margin_l">24dp</dimen>
+
+    <!-- Standard extra-large margin (32dp) -->
+    <dimen name="margin_xl">32dp</dimen>
+
+    <!-- Standard extra-extra-large margin (40dp) -->
+    <dimen name="margin_xxl">40dp</dimen>
+
+    <!-- Standard extra-extra-extra-large margin (48dp) -->
+    <dimen name="margin_xxxl">48dp</dimen>
+
+    <!-- Standard extra-extra-extra-extra-large margin (56dp) -->
+    <dimen name="margin_xxxxl">56dp</dimen>
+
+    <!-- Standard extra-extra-extra-extra-extra-large margin (64dp) -->
+    <dimen name="margin_xxxxxl">64dp</dimen>
+
+</resources>

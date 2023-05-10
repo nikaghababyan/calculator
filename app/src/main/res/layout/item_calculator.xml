@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/itemText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_70"
+        android:layout_margin="@dimen/margin_xs"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/AE"
+        tools:text="@string/equal"
+        android:gravity="center"
+        android:textColor="@color/Secondary_Button_text"
+        android:textSize="@dimen/size_24" />
+
+</LinearLayout>
